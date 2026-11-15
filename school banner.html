@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Francisco G. Nepomuceno Memorial High School official information and activities webpage.">
+    <title>FGNMHS | School Information</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <img src="logo.png" alt="FGNMHS School Logo" class="logo">
+
+            <div class="school-title">
+                <span>WELCOME TO</span>
+                <h1>FRANCISCO G. NEPOMUCENO</h1>
+                <h2>MEMORIAL HIGH SCHOOL</h2>
+                <p>Inspiring Students. Building Futures.</p>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#information">SCHOOL INFO</a>
+            <a href="#programs">PROGRAMS</a>
+            <a href="#activities">ACTIVITIES</a>
+            <a href="#announcements">ANNOUNCEMENTS</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="hero-label">FRANCISCO G. NEPOMUCENO MEMORIAL HIGH SCHOOL</span>
+
+                <h2>Education Today,<br>
+                    Success Tomorrow.</h2>
+
+                <p>
+                    A community where students discover their talents,
+                    develop their abilities, and create unforgettable
+                    experiences while preparing for a brighter future.
+                </p>
+
+                <a href="#about" class="hero-button">EXPLORE OUR SCHOOL</a>
+            </div>
+        </section>
+
+
+        <!-- ABOUT US -->
+        <section class="section" id="about">
+
+            <div class="section-heading">
+                <span>GET TO KNOW US</span>
+                <h2>About Our School</h2>
+                <p>Learning, Growing, and Achieving Together</p>
+            </div>
+
+            <div class="about-card">
+                <p>
+                    Francisco G. Nepomuceno Memorial High School is more
+                    than just a place of learning. It is a community where
+                    students are inspired to excel, discover their talents,
+                    and create unforgettable experiences.
+
+                    We provide quality education while offering engaging
+                    activities such as Recognition Day, Content-Based
+                    Integration (CBI), Career Immersion, Special Needs
+                    Education (SNED) Program, Intramurals, Buwan ng Wika
+                    Celebration, Cultural Dance and Theater Performances,
+                    Science and Technology Exhibits, Academic Competitions,
+                    Leadership Training, Clubs and Organizations,
+                    Community Outreach Programs, and various Senior High
+                    School events.
+
+                    These activities help students develop their knowledge,
+                    skills, creativity, leadership, teamwork, and confidence,
+                    preparing them to become responsible and successful
+                    individuals.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL INFORMATION -->
+        <section class="section information-section" id="information">
+
+            <div class="section-heading">
+                <span>KNOW MORE ABOUT US</span>
+                <h2>School Information</h2>
+                <p>Important details about our institution</p>
+            </div>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="info-icon">🏫</div>
+                    <h3>School Name</h3>
+                    <p id="schoolName">Loading...</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>School Address</h3>
+                    <p id="schoolAddress">Loading...</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Contact Number</h3>
+                    <p id="schoolContact">Loading...</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🎓</div>
+                    <h3>School Type</h3>
+                    <p id="schoolType">Loading...</p>
+                </div>
+
+            </div>
+
+            <div class="student-summary">
+
+                <div>
+                    <span class="summary-number" id="studentCount">0</span>
+                    <p>Sample Student Population</p>
+                </div>
+
+                <div>
+                    <span class="summary-number" id="programCount">0</span>
+                    <p>School Programs</p>
+                </div>
+
+                <div>
+                    <span class="summary-number" id="activityCount">0</span>
+                    <p>School Activities</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENROLLMENT CHECKER -->
+        <section class="section enrollment-section">
+
+            <div class="section-heading">
+                <span>STUDENT SERVICES</span>
+                <h2>Enrollment Information</h2>
+                <p>Check enrollment availability and basic eligibility</p>
+            </div>
+
+            <div class="enrollment-card">
+
+                <div class="enrollment-status">
+                    <h3>Current Enrollment Status</h3>
+                    <p id="enrollmentStatus">Checking enrollment...</p>
+                </div>
+
+                <div class="capacity-container">
+
+                    <div class="capacity-label">
+                        <span>School Capacity</span>
+                        <span id="capacityPercentage">0%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+
+                    <div class="capacity-details" id="capacityInfo">
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <h3>Student Eligibility Checker</h3>
+
+                <p>
+                    Enter your age and select your preferred grade level
+                    to check the basic eligibility requirements.
+                </p>
+
+                <div class="eligibility-form">
+
+                    <div class="form-group">
+                        <label for="studentAge">Student Age</label>
+                        <input
+                            type="number"
+                            id="studentAge"
+                            placeholder="Enter your age"
+                            min="1"
+                            max="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gradeLevel">Grade Level</label>
+
+                        <select id="gradeLevel">
+                            <option value="">Select Grade Level</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="primary-button" onclick="checkEligibility()">
+                    CHECK ELIGIBILITY
+                </button>
+
+                <p id="eligibilityResult" class="result-message">
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL PROGRAMS -->
+        <section class="section" id="programs">
+
+            <div class="section-heading">
+                <span>LEARNING OPPORTUNITIES</span>
+                <h2>Our School Programs</h2>
+                <p>Programs that support student development and success</p>
+            </div>
+
+            <div class="program-container">
+                <ul id="programList" class="program-list">
+                </ul>
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL HYMN -->
+        <section class="section hymn-section">
+
+            <div class="hymn-card">
+                <div class="hymn-icon">🎵</div>
+
+                <span>OUR SCHOOL SONG</span>
+
+                <h2>THE FGNMHS HYMN</h2>
+
+                <p>
+                    Celebrate our school pride and unity through
+                    the official school hymn.
+                </p>
+
+                <audio controls>
+                    <source src="FG_HYM.ogg" type="audio/ogg">
+                    <source src="FG_HYM.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL ACTIVITIES -->
+        <section class="section activities-section" id="activities">
+
+            <div class="section-heading">
+                <span>MEMORIES AND EXPERIENCES</span>
+                <h2>Our School Activities</h2>
+                <p>Celebrating creativity, teamwork, talents, and achievements</p>
+            </div>
+
+            <div class="activity-grid">
+
+                <article class="activity-card">
+                    <img src="1FB_IMG_.jpg" alt="Grade 11 Contemporary Dance">
+                    <div class="activity-content">
+                        <span class="activity-number">01</span>
+                        <h3>Grade 11 Contemporary Dance: Against Corruption</h3>
+                        <p>
+                            Grade 11 students presented a contemporary dance
+                            performance that raised awareness about the
+                            effects of corruption and encouraged honesty,
+                            integrity, and social responsibility through
+                            expressive movement.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="2FB_IMG_.jpg" alt="Grade 12 Festival Competition">
+                    <div class="activity-content">
+                        <span class="activity-number">02</span>
+                        <h3>Grade 12 Festival Competition</h3>
+                        <p>
+                            Students showcased their talents through vibrant
+                            festival-inspired performances, celebrating
+                            Filipino culture, traditions, and teamwork
+                            through music and dance.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="3FB_IMG_.jpg" alt="Zumba Fitness Activity">
+                    <div class="activity-content">
+                        <span class="activity-number">03</span>
+                        <h3>Zumba Fitness Activity</h3>
+                        <p>
+                            Students and teachers participated in an
+                            energetic Zumba session to promote physical
+                            fitness, healthy living, and an active lifestyle
+                            while having fun together.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="4FB_IMG_.jpg" alt="Career Outfit Showcase">
+                    <div class="activity-content">
+                        <span class="activity-number">04</span>
+                        <h3>Career Outfit Showcase</h3>
+                        <p>
+                            Students wore career-inspired outfits to
+                            represent different professions, helping
+                            them explore future career opportunities
+                            while developing confidence, creativity,
+                            and communication skills.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="5FB_IMG_.jpg" alt="SNED Educational Activity">
+                    <div class="activity-content">
+                        <span class="activity-number">05</span>
+                        <h3>Special Needs Education (SNED) Activity</h3>
+                        <p>
+                            This educational activity challenged students
+                            to think and respond quickly through interactive
+                            learning tasks that improved their knowledge,
+                            critical thinking, and teamwork.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="6FB_IMG_.jpg" alt="Science Creation Seminar">
+                    <div class="activity-content">
+                        <span class="activity-number">06</span>
+                        <h3>Science Creation Seminar</h3>
+                        <p>
+                            The activity introduced the "Book of the World"
+                            to students, encouraging them to discover new
+                            knowledge about biology, appreciate global
+                            cultures, and develop a love for science,
+                            reading, and learning.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="7FB_IMG_.jpg" alt="SNED Contemporary Dance">
+                    <div class="activity-content">
+                        <span class="activity-number">07</span>
+                        <h3>Contemporary Dance Performance by the SNED</h3>
+                        <p>
+                            The SNED students performed a contemporary
+                            dance that expressed emotions and meaningful
+                            messages through graceful movements,
+                            showcasing their creativity and artistic talents.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="8FB_IMG_.jpg" alt="CookFest Event">
+                    <div class="activity-content">
+                        <span class="activity-number">08</span>
+                        <h3>CookFest Event for Grade 12 BE Students</h3>
+                        <p>
+                            BE students showcased their culinary and
+                            entrepreneurial skills by preparing and selling
+                            a variety of delicious food. The event promoted
+                            teamwork, creativity, customer service, and
+                            basic business skills while giving students
+                            hands-on experience in food entrepreneurship.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="9FB_IMG_.jpg" alt="Sabayang Pagbigkas">
+                    <div class="activity-content">
+                        <span class="activity-number">09</span>
+                        <h3>Sabayang Pagbigkas for Buwan ng Wika</h3>
+                        <p>
+                            Students performed a synchronized choral
+                            recitation that highlighted the beauty of the
+                            Filipino language while promoting unity,
+                            patriotism, and appreciation of Filipino culture.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="activity-card">
+                    <img src="10FB_IMG_.jpg" alt="Buwan ng Wika Hat Design Competition">
+                    <div class="activity-content">
+                        <span class="activity-number">10</span>
+                        <h3>Buwan ng Wika Hat Design Competition with Fashion Model</h3>
+                        <p>
+                            Students designed creative hats inspired by
+                            Filipino culture and traditions, then confidently
+                            modeled their creations to showcase their
+                            artistic skills and cultural pride.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL YEAR VIDEO -->
+        <section class="section video-section">
+
+            <div class="section-heading">
+                <span>UNFORGETTABLE MEMORIES</span>
+                <h2>School Year 2025–2026</h2>
+                <p>A journey filled with growth, achievements, and memories</p>
+            </div>
+
+            <div class="video-card">
+
+                <video controls>
+                    <source src="FGSenior_high.mp4" type="video/mp4">
+                    <source src="FGSenior_high.ogg" type="video/ogg">
+                    Your browser does not support video playback.
+                </video>
+
+                <div class="video-description">
+
+                    <h3>Our Senior High School Journey</h3>
+
+                    <p>
+                        Let’s take a moment to reminisce about the journey
+                        of our Grade 11 students as they successfully
+                        completed their first year in Senior High School. ✨
+
+                        <br><br>
+
+                        From new beginnings to unforgettable memories,
+                        challenges to achievements—every step shaped who
+                        they are today. Accompanied by the inspiring song
+                        Hiraya, which reflects dreams, hopes, and aspirations,
+                        this video beautifully captures the vision each
+                        student carries for their future. 💫
+
+                        <br><br>
+
+                        Watch and relive the moments that defined their
+                        incredible journey—one filled with purpose, growth,
+                        and the courage to pursue their own hiraya. 💙
+
+                        <br><br>
+
+                        Here's to growth, resilience, and even greater
+                        milestones ahead!
+
+                        <br><br>
+
+                        <strong>- FGNMHS Senior High FB PAGE</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCHOOL ANNOUNCEMENTS -->
+        <section class="section announcements-section" id="announcements">
+
+            <div class="section-heading">
+                <span>STAY INFORMED</span>
+                <h2>School Announcements</h2>
+                <p>Important updates and information for students</p>
+            </div>
+
+            <div class="announcement-card">
+
+                <div class="announcement-buttons">
+
+                    <button onclick="showAnnouncement('enrollment')">
+                        🎓 Enrollment
+                    </button>
+
+                    <button onclick="showAnnouncement('activities')">
+                        🎭 Activities
+                    </button>
+
+                    <button onclick="showAnnouncement('events')">
+                        📅 School Events
+                    </button>
+
+                </div>
+
+                <div class="announcement-display">
+                    <h3 id="announcementTitle">
+                        Welcome to FGNMHS!
+                    </h3>
+
+                    <p id="announcementResult">
+                        Select an announcement above to view more information.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div class="footer-content">
+
+                <img src="logo.png" alt="FGNMHS Logo">
+
+                <h2>FRANCISCO G. NEPOMUCENO MEMORIAL HIGH SCHOOL</h2>
+
+                <p>Inspiring Students. Building Futures.</p>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#information">School Info</a>
+                    <a href="#activities">Activities</a>
+                </div>
+
+                <p class="copyright">
+                    © <span id="currentYear"></span>
+                    Francisco G. Nepomuceno Memorial High School.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
